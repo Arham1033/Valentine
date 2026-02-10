@@ -1,65 +1,134 @@
-import Image from "next/image";
+"use client";
+import "./globals.css";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+const router = useRouter();
+   // Define your sequence of positions
+  const positions = [
+    { top: 0, left: 0 },
+    { top: 90, left: 50 },
+    { top: -200, left: -60 },
+    { top: 100, left: -120 },
+  ];
+
+    const [index, setIndex] = useState(0);
+  // State to hide No button
+  const [hideNo, setHideNo] = useState(false);
+
+  const handleClick = () => {
+    if (index < messages.length - 1) {
+      // Move to next message and position
+      setIndex(prev => prev + 1);
+    } else {
+      // Last click → hide No button
+      setHideNo(true);
+    }
+  };
+
+ // Determine which GIF to show below "Will you be my Valentine?"
+  const getValentineGif = () => {
+    if (!hideNo) {
+      // During No clicks
+      if (index === 0) return "/gif1.gif";        // initial gif
+      else return "/gif8.gif";                   // after first No click
+    } else {
+      // After No disappears
+      return "/gif9.gif";                        // final gif celebrating Yes
+    }
+  };
+
+const messages = [
+  "No 😤",
+  "No 😐",
+  "Still No 🙄",
+  "Noooo! 🙂"
+];
+
+   // Custom text to show below GIF on each No click
+  const customTexts = [
+    "Why you choose No 😭",
+    "You can only choose Yes 😉",
+    "Keep trying 😏",
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+   <>
+   <div className="w-screen h-screen bg-[url('/v2.avif')] bg-cover bg-center bg-no-repeat">
+   <div className="inner flex flex-col justify-center items-center p-10">
+    <div className="heading relative animate-fadeIn1">
+    <h1 className="font-bold sm:text-4xl text-pink-500 text-2xl text-stroke z-10 relative text-center">Happy Valentines Day</h1>
+    <img className="absolute -top-6 z-0" width={100} src="/gif7.gif" alt=""/>
+    <img className="absolute -top-6 right-1 z-0" width={100} src="/gif7.gif" alt=""/>
     </div>
+    <div className="relative animate-fadeIn2">
+<img className="rounded-2xl mt-5" width={300} src="/v3.jpg" alt=""/>
+<span className=" font-semibold text-pink-500 absolute top-35 left-9 sm:left-12 text-sm">Will you be my Valentine ??🍷</span>
+{/* Dynamic GIF that changes based on No clicks */}
+          <img
+            className="absolute top-40 sm:top-35 left-1/2 -translate-x-1/2 w-full max-w-20 sm:max-w-20 md:max-w-30 h-auto"
+            src={getValentineGif()}
+            alt="valentine gif"
+          />
+             {/* Custom text below GIF appears progressively */}
+          {!hideNo && index > 0 && (
+            <span className="mt-3 text-xl font-semibold text-pink-500 text-center animate-fadeIn flex justify-center">
+              {customTexts[index - 1]}
+            </span>
+          )}
+    </div>
+
+
+{hideNo && (
+  <div className="flex flex-col items-center mt-4 relative h-4 opacity-0 animate-fadeIn">
+    <h2 className="sm:text-2xl text-xl font-bold text-pink-500 mb-4 z-10 text-center">
+      Now you only have one option 😁
+    </h2>
+
+    {/* Arrow GIFs pointing toward the Yes button */}
+    <img
+      className="absolute md:top-25 top-30 z-10 -rotate-100 w-16 h-16"
+      src="/gif5.gif"
+      alt="arrow"
+    />
+    <img
+      className="absolute md:top-4 top-10 md:left-21 sm:left-12 left-6 -rotate-100 w-16 h-16"
+      src="/gif4.gif"
+      alt="arrow"
+    />
+    <img
+      className="absolute md:top-8 top-12 md:right-21 sm:right-12 right-6 -rotate-340 w-16 h-16"
+      src="/gif4.gif"
+      alt="arrow"
+    />
+  </div>
+)}
+
+
+<div className="btns flex gap-10 md:mt-8 mt-14 relative"> 
+
+<button onClick={() => router.push("/yes")} className="bg-pink-600 text-pink-300 border animate-fadeIn border-pink-400 border-b-4 overflow-hidden px-5 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group cursor-pointer font-semibold hover:scale-105 relative w-fit">
+  <span className="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-1.25 rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+    Yes 👻
+</button> 
+
+  {!hideNo && (
+    
+    <button onClick={handleClick}
+    style={{
+      top: positions[index].top,
+      left: positions[index].left,
+    }} className="bg-pink-600 text-pink-300 border border-pink-400 border-b-4 overflow-hidden px-5 animate-fadeIn py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group cursor-pointer font-semibold hover:scale-105 relative w-fit">
+  <span className="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-1.25 rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+  {messages[index]}
+</button>
+  )}
+
+</div>
+
+   </div>
+   </div>
+   </>
   );
 }
