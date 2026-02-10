@@ -67,7 +67,7 @@ const messages = [
 <span className=" font-semibold text-pink-500 absolute top-35 left-9 sm:left-12 text-sm">Will you be my Valentine ??🍷</span>
 {/* Dynamic GIF that changes based on No clicks */}
           <img
-            className="absolute top-40 sm:top-35 left-1/2 -translate-x-1/2 w-full max-w-20 sm:max-w-20 md:max-w-30 h-auto"
+            className="absolute top-40 sm:top-38 left-1/2 -translate-x-1/2 w-full max-w-20 sm:max-w-20 md:max-w-28 h-auto"
             src={getValentineGif()}
             alt="valentine gif"
           />
