@@ -27,9 +27,9 @@ const Page = () => {
         <p className='text-pink-500 text-stroke1 valentine-text4 sm:text-xl px-5 text-lg animate-fadeIn1'>The Moon is beautiful, isn't it ?
         </p>
         <div className="flex relative">
-          <img className="sm:w-40 sm:h-40 w-30 h-30 rounded-full circle-enter enter-left z-10" src="/pfp1.jpg" alt="" />
+          <img className="sm:w-40 sm:h-40 w-30 h-30 rounded-full circle-enter enter-left z-10" src="/ppp1.jpg" alt="" />
           <img className='rotate-10 sm:w-30 sm:h-40 w-20 h-30 animate-slideInBottom absolute left-[30%]' src="/gif1.5.gif" alt=""/>
-          <img className="sm:w-40 sm:h-40 w-30 h-30 rounded-full circle-enter enter-right" src="/pfp2.jpg" alt="" />
+          <img className="sm:w-40 sm:h-40 w-30 h-30 rounded-full circle-enter enter-right" src="/ppp2.jpg" alt="" />
         </div>
         </div>
 
