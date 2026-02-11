@@ -23,7 +23,7 @@ const Page = () => {
         <div className='flex flex-col items-center'>
 
         <h1 className='text-pink-500 text-stroke1 valentine-text4 sm:text-3xl text-2xl text-center px-5 animate-fadeIn1'>Thanks for always there for me 🤧</h1>
-        <h2 className='text-pink-500 text-stroke1 valentine-text4 sm:text-2xl text-xl text-center px-5 animate-fadeIn1'>I'm Lucky i got a Girl who is preety by both Heart & Face 💗</h2>
+        <h2 className='text-pink-500 text-stroke1 valentine-text4 sm:text-2xl text-xl text-center px-5 animate-fadeIn1'>I'm Lucky i got a Girl who is pretty by both Heart & Face 💗</h2>
         <p className='text-pink-500 text-stroke1 valentine-text4 sm:text-xl px-5 text-lg animate-fadeIn1'>The Moon is beautiful, isn't it ?
         </p>
         <div className="flex relative">

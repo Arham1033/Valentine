@@ -64,7 +64,7 @@ const messages = [
     </div>
     <div className="relative animate-fadeIn2">
 <img className="rounded-2xl mt-5" width={300} src="/v3.jpg" alt=""/>
-<span className="text-pink-500 absolute top-35 left-9 sm:left-12 text-sm valentine-text4">Will you be my Valentine ??🍷</span>
+<span className="text-pink-500 absolute top-35 left-10 sm:left-12 text-sm font-bold">Will you be my Valentine?🍷</span>
 {/* Dynamic GIF that changes based on No clicks */}
           <img
             className="absolute top-40 sm:top-38 left-1/2 -translate-x-1/2 w-full max-w-20 sm:max-w-20 md:max-w-28 h-auto"
@@ -73,7 +73,7 @@ const messages = [
           />
              {/* Custom text below GIF appears progressively */}
           {!hideNo && index > 0 && (
-            <span className="mt-3 text-xl text-pink-500 text-center animate-fadeIn flex justify-center valentine-text tracking-wide">
+            <span className="mt-3 text-xl text-pink-500 text-center animate-fadeIn flex justify-center font-semibold">
               {customTexts[index - 1]}
             </span>
           )}
@@ -82,7 +82,7 @@ const messages = [
 
 {hideNo && (
   <div className="flex flex-col items-center mt-4 relative h-4 opacity-0 animate-fadeIn">
-    <h2 className="sm:text-2xl text-xl text-pink-500 mb-4 z-10 text-center valentine-text tracking-wide">
+    <h2 className="sm:text-2xl text-xl text-pink-500 mb-4 z-10 text-center font-semibold">
       Now you only have one option 😁
     </h2>
 
@@ -93,12 +93,12 @@ const messages = [
       alt="arrow"
     />
     <img
-      className="absolute md:top-4 top-10 md:left-10 sm:left-12 left-6 -rotate-100 w-16 h-16"
+      className="absolute md:top-4 top-10 md:left-21 sm:left-12 left-6 -rotate-100 w-16 h-16"
       src="/gif4.gif"
       alt="arrow"
     />
     <img
-      className="absolute md:top-8 top-12 md:right-10 sm:right-12 right-6 -rotate-340 w-16 h-16"
+      className="absolute md:top-8 top-12 md:right-21 sm:right-12 right-6 -rotate-340 w-16 h-16"
       src="/gif4.gif"
       alt="arrow"
     />
@@ -108,7 +108,7 @@ const messages = [
 
 <div className="btns flex gap-10 md:mt-8 mt-14 relative"> 
 
-<button onClick={() => router.push("/yes")} className="bg-pink-600 text-pink-300 border animate-fadeIn border-pink-400 border-b-4 overflow-hidden px-5 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group cursor-pointer hover:scale-105 relative w-fit valentine-text tracking-wide">
+<button onClick={() => router.push("/yes")} className="bg-pink-600 text-pink-300 border animate-fadeIn border-pink-400 border-b-4 overflow-hidden px-5 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group cursor-pointer hover:scale-105 relative w-fit font-semibold ">
   <span className="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-1.25 rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
     Yes 👻
 </button> 
@@ -119,7 +119,7 @@ const messages = [
     style={{
       top: positions[index].top,
       left: positions[index].left,
-    }} className="bg-pink-600 text-pink-300 border border-pink-400 border-b-4 overflow-hidden px-5 animate-fadeIn py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group cursor-pointer hover:scale-105 relative w-fit valentine-text tracking-wide">
+    }} className="bg-pink-600 text-pink-300 border border-pink-400 border-b-4 overflow-hidden px-5 animate-fadeIn py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group cursor-pointer hover:scale-105 font-semibold relative w-fit ">
   <span className="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-1.25 rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
   {messages[index]}
 </button>
