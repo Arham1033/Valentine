@@ -15,7 +15,7 @@ const page = () => {
         setProgress(prev => {
           if (prev >= 100) {
             clearInterval(interval);
-            setTimeout(() => setLoading(false), 400); // wait a bit before hiding preloader
+            setTimeout(() => setLoading(false), 600); // wait a bit before hiding preloader
             return 100;
           }
           return prev + 5; // increase progress

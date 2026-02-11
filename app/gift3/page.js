@@ -104,7 +104,7 @@ const handleSeek = (e) => {
    
 <button onClick={() => router.push("/back")} className="bg-pink-600 text-pink-300 border-3 border-pink-300 overflow-hidden px-5 py-2 rounded-md hover:brightness-150 hover:border-pink-400 active:opacity-75 transition-all duration-300 cursor-pointer valentine-text2 tracking-wider group animate-fadeIn1 relative hover:scale-105">
   <span className="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-1.25 rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-  Back ⮜
+  Back ↩
 </button> 
     </div>
     </div>
