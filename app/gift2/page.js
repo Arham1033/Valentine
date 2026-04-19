@@ -25,7 +25,7 @@ const router = useRouter();
     {/* ❤️ HEART RAIN */}
       {showHearts && <HeartRain />}
 
-      <h1 className='text-center valentine-text3 sm:text-4xl text-3xl font-semibold text-pink-400 text-stroke1 pt-10 animate-fadeIn1 px-5'>Love letter to the prettiest Girl in the World 😘</h1>
+      <h1 className='text-center valentine-text5 sm:text-3xl text-xl font-semibold text-pink-400 text-stroke1 pt-10 animate-fadeIn1 px-2'>Love letter to the prettiest Girl in the World 😘</h1>
       <div className='flex justify-center flex-col items-center pt-8'>
 
 

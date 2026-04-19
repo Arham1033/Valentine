@@ -58,13 +58,13 @@ const messages = [
    <div className="w-screen h-screen bg-[url('/v2.avif')] bg-cover bg-center bg-no-repeat">
    <div className="inner flex flex-col justify-center items-center p-10">
     <div className="heading relative animate-fadeIn1">
-    <h1 className="sm:text-4xl text-pink-500 text-3xl text-stroke1 z-10 relative text-center valentine-text">Happy Valentines Day</h1>
+    <h1 className="sm:text-4xl text-pink-500 text-3xl text-stroke1 z-10 relative text-center valentine-text1">Happy Valentines Day</h1>
     <img className="absolute -top-6 z-0" width={100} src="/gif7.gif" alt=""/>
     <img className="absolute -top-6 right-1 z-0" width={100} src="/gif7.gif" alt=""/>
     </div>
     <div className="relative animate-fadeIn2">
 <img className="rounded-2xl mt-5" width={300} src="/v3.jpg" alt=""/>
-<span className="text-pink-500 absolute top-35 left-10 sm:left-12 text-sm font-bold">Will you be my Valentine?🍷</span>
+<span className="text-pink-500 absolute top-35 left-10 sm:left-12 text-sm font-bold text-ce">Will you be my Valentine?🍷</span>
 {/* Dynamic GIF that changes based on No clicks */}
           <img
             className="absolute top-40 sm:top-38 left-1/2 -translate-x-1/2 w-full max-w-20 sm:max-w-20 md:max-w-28 h-auto"

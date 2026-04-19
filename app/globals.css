@@ -79,6 +79,7 @@ body{
     0.5px -0.5px #000000,
    -0.5px 0.5px #000000;
 } 
+
 * {
   cursor: url("/cursor1.png") 12 12, auto;
 }
