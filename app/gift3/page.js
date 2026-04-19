@@ -70,7 +70,7 @@ const handleSeek = (e) => {
         <div className="flex justify-center flex-col items-center relative ">
 <img className="absolute sm:-right-10 right-0 sm:top-3 top-[24%] animate-fadeIn2 sm:w-30 w-15" src="/gif6.gif" alt=""/>
 <img className="absolute sm:-left-10 left-0 sm:top-3 top-[24%] animate-fadeIn2 sm:w-40 w-20" src="/gif3.gif" alt=""/>
-<video ref={videoRef} className='object-cover aspect-9/13 sm:mt-[35] mt-40 w-80'playsInline src="/music.webm"></video>
+<video preload="metadata" ref={videoRef}  className='object-cover aspect-9/13 sm:mt-[35] mt-40 w-80'playsInline src="/music.webm"></video>
  {/* ▶️ / ⏸ BUTTON */}
         <button
           onClick={handlePlayPause}
