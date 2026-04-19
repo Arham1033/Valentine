@@ -58,7 +58,7 @@ const messages = [
    <div className="w-screen h-screen bg-[url('/v2.avif')] bg-cover bg-center bg-no-repeat">
    <div className="inner flex flex-col justify-center items-center p-10">
     <div className="heading relative animate-fadeIn1">
-    <h1 className="sm:text-4xl text-pink-500 text-3xl text-stroke1 z-10 relative text-center valentine-text1">Happy Valentines Day</h1>
+    <h1 className="sm:text-4xl text-pink-500 text-3xl text-stroke1 z-10 relative text-center valentine-text6">Happy Valentines Day</h1>
     <img className="absolute -top-6 z-0" width={100} src="/gif7.gif" alt=""/>
     <img className="absolute -top-6 right-1 z-0" width={100} src="/gif7.gif" alt=""/>
     </div>
