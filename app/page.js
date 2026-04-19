@@ -64,7 +64,7 @@ const messages = [
     </div>
     <div className="relative animate-fadeIn2">
 <img className="rounded-2xl mt-5" width={300} src="/v3.jpg" alt=""/>
-<span className="text-pink-500 absolute top-35 left-10 sm:left-12 text-sm font-bold text-center valentine-text1">Will you be my Valentine?🍷</span>
+<span className="text-pink-500 absolute top-35 left-10 sm:left-12 text-sm font-bold text-center">Will you be my Valentine?🍷</span>
 {/* Dynamic GIF that changes based on No clicks */}
           <img
             className="absolute top-40 sm:top-38 left-1/2 -translate-x-1/2 w-full max-w-20 sm:max-w-20 md:max-w-28 h-auto"

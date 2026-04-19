@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @font-face {
   font-family: "LoveLive";
   src: url("/fonts/Fontarian Sweet Heart.otf") format("truetype");
@@ -7,6 +8,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "LoveLive2";
   src: url("/fonts/Love Live.ttf") format("truetype");
@@ -35,10 +37,13 @@
   font-style: normal;
   font-display: swap;
 }
-body{
-  font-family: "LoveScript", cursive;
+body {
+  font-family: var(--font-open-sans);
 }
 
+.open-sans{
+font-family: "Open Sans", sans-serif;
+}
 .valentine-text {
   font-family: "LoveLive", cursive;
 }
@@ -48,6 +53,7 @@ body{
 .valentine-text3 {
   font-family: "LoveLive3", cursive;
 }
+
 .valentine-text4 {
   font-family: "LoveLive4", cursive;
 }
